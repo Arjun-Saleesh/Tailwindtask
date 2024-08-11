@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="png/img" href="https://th.bing.com/th/id/OIP.juK95BqCQ6PSzh6WR5BdtwAAAA?pid=ImgDet&w=179&h=179&c=7&dpr=1.3">
+    <title>Adventure Awaits</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    
+    <style>
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background: none; /* Removes the default background image */
+        }
+        .polpular img{
+          width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                        </svg>
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="h-10 w-auto" src="https://th.bing.com/th/id/OIP.4xX_oWUT1PseCRS1c2xVQwAAAA?pid=ImgDet&w=179&h=134&c=7&dpr=1.3" alt="Your Company">
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Home</a>
+                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Packages</a>
+                            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                        <span class="absolute -inset-1.5"></span>
+                        <span class="sr-only">View notifications</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/>
+                        </svg>
+                    </button>
+                    <div class="relative ml-3">
+                        <div>
+                            <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                <span class="absolute -inset-1.5"></span>
+                                <span class="sr-only">Open user menu</span>
+                                <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            </button>
+                        </div>        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-screen h-90" src="https://img.freepik.com/free-photo/majestic-mountain-range-tranquil-waterfall-drop-beauty-generated-by-ai_188544-28214.jpg?t=st=1723378035~exp=1723381635~hmac=883b29136178fe2d907e095439f0c8af05181023094e27cb19d98076245595da&w=1380" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img class="w-screen h-90" src="https://img.freepik.com/free-photo/view-beautiful-rainbow-nature-landscape_23-2151597605.jpg?t=st=1723377935~exp=1723381535~hmac=d1690d5e77f5258be9fa80b51a014d53046956b718ed3f7b1faa0ae957dcceb2&w=1380" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img class="w-screen h-90" src="https://img.freepik.com/free-photo/water-beach-background-andaman-tropical_1203-3901.jpg?t=st=1723377772~exp=1723381372~hmac=cebd5dec4d41db2d9b61724ac43b4cc201ada08a0ed3ecc27abb8748f0926b75&w=1060" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z"/>
+                </svg>
+            </span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L9.293 7 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- content -->
+
+    <div class="container w-50 text-center font-mono font-extrabold text-4xl mt-10">
+      <h1>Popular <span class="text-green-700">Packages</span></h1>
+    </div>
+
+    <div class="polpular flex m-10 p-10 gap-5 bg-gray-50 rounded shadow-md mb-20">
+      <div>
+        <div>
+          <img class="rounded hover:cursor-pointer shadow-lg " src="https://img.freepik.com/free-photo/hiker-going-up-aiguille-du-midi_53876-139593.jpg?t=st=1723376599~exp=1723380199~hmac=42beaaa97d829bd534cf6939b1c2b7b945bd7e17fea4b0c06ced002266375433&w=1060" alt="">
+        </div>
+        <h1 class="text-center font-serif font-semibold text-2xl mt-3">Adventure</h1>
+      </div>
+      <div>
+        <div>
+          <img class="rounded hover:cursor-pointer shadow-lg " src="https://cdn.pixabay.com/photo/2019/03/10/08/58/lord-4045702_1280.jpg" alt="">
+        </div>
+        <h1 class="text-center font-serif font-semibold text-2xl mt-3">Cultural & Heritage</h1>
+      </div>
+      <div>
+        <div>
+          <img class="rounded hover:cursor-pointer shadow-lg" src="https://img.freepik.com/free-photo/landscape-tropical-vacation-palm-summer_1203-5352.jpg?t=st=1723376394~exp=1723379994~hmac=ffcd66ad63dc3c4d4b0a99be02070d5dae16f40f318025f9e66faa39a2235605&w=1060" alt="">
+        </div>
+        <h1 class="text-center font-serif font-semibold text-2xl mt-3">Beach & Relaxation</h1>
+      </div>
+      <div>
+        <div>
+          <img class="rounded hover:cursor-pointer shadow-lg" src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?t=st=1723376842~exp=1723380442~hmac=ae70531fec808dd0371970b04582e98c5cc9ea9cdc96f4cc46c651254e9a6b54&w=1060" alt="">
+        </div>
+        <h1 class="text-center font-serif font-semibold text-2xl mt-3">Nature & Wildlife</h1>
+      </div>
+    </div>
+
+    <!-- content -->
+     
+<div class="flex justify-around">
+  <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg " src="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg?t=st=1723377647~exp=1723381247~hmac=52655f18f99ce0c8626738f05a3efe47356781e25e355a10ef4378b23b49dff0&w=1060" alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Special Offer</h5>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Dive into the ultimate beach experience with our Summer Splash Special. Enjoy a 5-night stay at a top-rated seaside resort, complete with complimentary spa treatments, a sunset cruise, and gourmet dining, all at a 30% discount.</p>
+    </div>
+  </a>
+  <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover  w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://img.freepik.com/free-photo/two-happy-woman-blogger-tourist-friends-silk-suit-scarf-sunglasses-vacation-travel-around-thailand-asian-boat-khao-sok-national-park_343596-1069.jpg?t=st=1723377299~exp=1723380899~hmac=02c5e9fd756d4def12d4e9bf52eb6f0c0534d6c364c90e7f1dd6391c7ef819ee&w=1060" alt="">
+    <div class="flex flex-col justify-between p-4 leading-normal">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Luxury Tours</h5>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Indulge in a 7-night stay at a private overwater villa, complete with personal butler service, private infinity pool, and oceanfront dining. This exclusive package includes a yacht transfer, personalized excursions, and a 40% discount for a truly opulent escape.</p>
+    </div>
+  </a>
+</div>
+
+    
+
+
+<!-- gallery -->
+ 
+<div class="mt-20 mb-5">
+  <h1 class="text-center font-bold text-3xl">Gallery </h1>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://img.freepik.com/free-photo/aerial-shot-long-road-surrounded-by-trees-fields_181624-45080.jpg?t=st=1723376045~exp=1723379645~hmac=4c7336a0cf83afa4cfb2cb3cd205cb08806088cb75720ba867b353631a109b06&w=740" alt="">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://cdn.pixabay.com/photo/2017/07/07/18/10/island-2482200_960_720.jpg" alt="">
+      </div>
+      <div>
+          <!-- <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt=""> -->
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://cdn.pixabay.com/photo/2024/07/17/10/25/ocean-8901157_1280.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg " src="https://img.freepik.com/free-photo/world-map-continent-global-support-graphic_53876-124649.jpg?t=st=1723375550~exp=1723379150~hmac=7a5a8e00e9c476a010a84815adea7229a4121db34539a238ec1cf3ec7ad73df6&w=740" alt="">
+      </div>
+      <div>
+          <!-- <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt=""> -->
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://img.freepik.com/free-photo/beautiful-waterfall-streaming-into-river-surrounded-by-greens_181624-46318.jpg?t=st=1723376107~exp=1723379707~hmac=850503f94798004c67cdf1aa5a51d72f93a40432cd02d66a9976c69a76149589&w=740" alt="">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://cdn.pixabay.com/photo/2017/04/07/15/48/road-to-nowhere-2211240_1280.jpg" alt="">
+          
+      </div>
+      <div>
+          <!-- <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt=""> -->
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://cdn.pixabay.com/photo/2024/06/18/04/33/travel-8836969_1280.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://cdn.pixabay.com/photo/2021/07/21/06/15/island-6482321_640.jpg" alt="">
+      </div>
+      <div>
+          <!-- <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt=""> -->
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- star -->
+ 
+
+
+
+
+
+
+
+     <!-- footer -->
+      
+
+<footer class="bg-black rounded-lg shadow  dark:bg-gray-800 mb-0 ">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+  </span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6">About</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline">Contact</a>
+      </li>
+  </ul>
+  </div>
+</footer>
+
+</body>
+</html>
